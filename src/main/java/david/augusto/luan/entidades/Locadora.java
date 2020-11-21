@@ -18,19 +18,28 @@ public abstract class Locadora implements LocadoraCarros{
 
 	@Override
 	public void adicionarCarro(String modelo, String marca, int ano, double diaria) {
-		
-		
+		Carro carro = new Carro(modelo, marca,ano, diaria);
+		carros.add(carro);
 	}
 
 	@Override
 	public List<String> listarCarroDaMarca(String modelo) {
-		// TODO Auto-generated method stub
+		
+		for (Carro c : carros) {
+			if (c.getModelo().equals(modelo)) {
+		
+			}
+		}
 		return null;
 	}
 
 	@Override
 	public void removerCarro(String modelo, String marca, int ano) {
-		// TODO Auto-generated method stub
+		for (Carro c : carros) {
+			if (c.getModelo().equals(modelo) && c.getMarca().equals(marca) && c.getAno() == ano) {
+				carros.remove(c);
+			}
+		}
 		
 	}
 
