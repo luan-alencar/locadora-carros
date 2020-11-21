@@ -8,7 +8,7 @@ import lombok.Getter;
 
 @lombok.Data
 @Getter
-public abstract class Locadora implements LocadoraCarros{
+public abstract class Locadora implements LocadoraCarros {
 
 	private List<Carro> carros;
 
@@ -18,19 +18,19 @@ public abstract class Locadora implements LocadoraCarros{
 
 	@Override
 	public void adicionarCarro(String modelo, String marca, int ano, double diaria) {
-		Carro carro = new Carro(modelo, marca,ano, diaria);
+		Carro carro = new Carro(modelo, marca, ano, diaria);
 		carros.add(carro);
 	}
 
 	@Override
-	public List<String> listarCarroDaMarca(String modelo) {
-		
+	public List<Carro> listarCarroDaMarca(String modelo) {
+		List<Carro> carroMarca = null;
 		for (Carro c : carros) {
 			if (c.getModelo().equals(modelo)) {
-		
+				carroMarca = carros;
 			}
 		}
-		return null;
+		return carroMarca;
 	}
 
 	@Override
@@ -40,16 +40,8 @@ public abstract class Locadora implements LocadoraCarros{
 				carros.remove(c);
 			}
 		}
-		
 	}
 
-	@Override
-	public double alugarCarro(Carro carro, Data dataInicio, Data dataFim) {
-		// TODO Auto-generated method stub
-		return 0;
-	}
 	
-	
-	
-	
+
 }
