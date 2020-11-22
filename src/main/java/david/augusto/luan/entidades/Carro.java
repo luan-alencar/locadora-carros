@@ -22,6 +22,7 @@ public class Carro {
 		this.marca = marca;
 		this.ano = ano;
 		this.diaria = diaria;
+		this.alugado = false;
 	}
 
 	public void setAlugado() {
