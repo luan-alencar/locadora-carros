@@ -21,14 +21,14 @@ public abstract class Locadora implements LocadoraCarros {
 	}
 
 	@Override
-	public List<Carro> listarCarroDaMarca(String modelo) {
-		List<Carro> carroMarca = null;
+	public List<Carro> listarCarrosDaMarca(String marca) {
+		List<Carro> carrosDeMesmaMarca = new ArrayList<Carro>();
 		for (Carro c : carros) {
-			if (c.getModelo().equals(modelo)) {
-				carroMarca = carros;
+			if (c.getMarca().equals(marca)) {
+				carrosDeMesmaMarca = carros;
 			}
 		}
-		return carroMarca;
+		return carrosDeMesmaMarca;
 	}
 
 	@Override
@@ -40,7 +40,7 @@ public abstract class Locadora implements LocadoraCarros {
 		}
 	}
 
-	public List<Carro> getCarros(){
+	public List<Carro> getCarros() {
 		return carros;
 	}
 
