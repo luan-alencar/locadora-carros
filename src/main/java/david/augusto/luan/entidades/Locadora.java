@@ -4,10 +4,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 import david.augusto.luan.interfaces.LocadoraCarros;
-import lombok.Getter;
 
 @lombok.Data
-@Getter
 public abstract class Locadora implements LocadoraCarros {
 
 	private List<Carro> carros;
@@ -42,6 +40,8 @@ public abstract class Locadora implements LocadoraCarros {
 		}
 	}
 
-	
+	public List<Carro> getCarros(){
+		return carros;
+	}
 
 }
