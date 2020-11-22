@@ -9,7 +9,7 @@ public interface LocadoraCarros {
 
 	public void adicionarCarro(String modelo, String marca, int ano, double diaria);
 	
-	public List<Carro> listarCarroDaMarca(String modelo);
+	public List<Carro> listarCarrosDaMarca(String modelo);
 	
 	public void removerCarro(String modelo, String marca, int ano);
 	
